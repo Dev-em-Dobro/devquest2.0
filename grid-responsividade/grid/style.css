@@ -1,0 +1,10 @@
+.container div,
+.container-2 div {
+  border: 1px solid black;
+  color: white;
+  font-size: 20px;
+}
+
+.container div {
+  background-color: blueviolet;
+}
