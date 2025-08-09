@@ -1,32 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Worldkicks - Loja de tênis online com os melhores modelos e marcas. Encontre seu tênis ideal.">
+    <meta name="description"
+        content="Worldkicks - Loja de tênis online com os melhores modelos e marcas. Encontre seu tênis ideal.">
     <title>SyntaxWear - Tênis e Sneakers Online</title>
-    
+
     <!-- CSS Links -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
-        <!-- Logo e navegação serão adicionados depois -->
+        <!-- Logo com semântica e SEO -->
+        <h1 class="logo">
+            <a href="/" title="SyntaxWear - Tênis e Sneakers Online">
+                <img src="./assets/images/logo.svg" alt="SyntaxWear - Tênis e Sneakers Online">
+            </a>
+        </h1>
+
+        <nav class="nav-center" aria-label="Categorias principais">
+            <ul>
+                <li><a href="#">Masculino</a></li>
+                <li><a href="#">Feminino</a></li>
+                <li><a href="#">Outlet</a></li>
+            </ul>
+        </nav>
+
+        <!-- Navegação direita -->
+        <nav class="nav-right" aria-label="Links e Ações">
+            <ul>
+                <li><a href="#">Nossas Lojas</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#"><img src="./assets/images/user.svg" alt="Login"></a></li>
+                <li><a href="#"><img src="./assets/images/question-mark.svg" alt="FAQ"></a></li>
+                <li><a href="#"><img src="./assets/images/cart.svg" alt="Carrinho de compras"></a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Conteúdo Principal -->  
+    <!-- Conteúdo Principal -->
     <main class="main">
         <!-- Hero Section -->
         <section class="hero">
-            <!-- Conteúdo hero será adicionado depois -->
-             <h1>Teste de Tipografia</h1>
-    <h2>Subtítulo de exemplo</h2>
-    <p>Este é um parágrafo de teste para verificar se as fontes estão carregando corretamente.</p>
-    <a href="#">Link de exemplo</a>
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h4>Krypton One</h4>
+                    <h1>Transforme qualquer passo em presença.</h1>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-outline">Ver modelos</a>
+                        <a href="#" class="btn btn-filled">Comprar</a>
+                    </div>
+                </div>
+            </div>
         </section>
+        
 
         <!-- Categories -->
         <section class="categories">
@@ -54,4 +87,5 @@
         <!-- Informações de contato serão adicionadas depois -->
     </footer>
 </body>
+
 </html>

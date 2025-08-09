@@ -37,6 +37,7 @@
     --espaco-mediano: 16px;
     --espaco-grande: 32px;
     --espaco-extra-grande: 64px;
+    --espaco-menu: 0.25rem;
 }
 
 /* Breakpoints (tamanhos de tela para responsividade) */

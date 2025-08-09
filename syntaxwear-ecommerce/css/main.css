@@ -6,4 +6,171 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    position: relative;
+}
+
+/* ===== HEADER GERAL ===== */
+.header {
+    position: fixed; /* Fica fora do fluxo, sobrepondo a imagem */
+    top: 20px;          /* Distância do topo da página */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    background: white;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    width: calc(100% - 40px); /* Largura responsiva com margem lateral */
+    z-index: 1; /* Sempre sobre o Hero */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+/* ===== LOGO ===== */
+.logo {
+    margin: 0; /* Remove margens padrão do h1/p */
+}
+
+.logo a {
+    display: flex; /* Permite centralizar o logo se necessário */
+    align-items: center; /* Alinha verticalmente o SVG */
+    text-decoration: none; /* Remove sublinhado do link */
+}
+
+.logo img {
+    height: 40px; /* Altura fixa para manter proporção */
+    width: auto; /* Mantém largura proporcional */
+}
+
+/* ===== NAVEGAÇÃO CENTRAL ===== */
+.nav-center ul {
+    list-style: none; /* Remove marcadores */
+    display: flex; /* Links lado a lado */
+    gap: 2.5rem; /* Espaço horizontal entre itens */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-center a {
+    text-decoration: none; /* Remove sublinhado */
+    color: #111; /* Preto suave */
+    font-weight: 500; /* Peso médio */
+    transition: color 0.2s ease; /* Animação suave no hover */
+    font-weight: 400;
+}
+
+.nav-center a:hover, .nav-right a:hover {
+    color: #7c3aed; /* Roxo no hover */
+}
+
+/* ===== NAVEGAÇÃO DIREITA ===== */
+.nav-right ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem; /* Espaço menor que no centro */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-right a {
+    display: flex; /* Facilita alinhamento dos ícones */
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-right img {
+    height: 24px; /* Tamanho padrão dos ícones */
+    width: auto;
+    transition: opacity 0.2s ease;
+}
+
+.nav-right a:hover img {
+    opacity: 0.7; /* Leve efeito no hover */
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .header-content {
+        flex-wrap: wrap; /* Permite quebra de linha */
+        justify-content: center; /* Centraliza tudo */
+        gap: 1rem;
+    }
+
+    .nav-center ul {
+        gap: 1rem; /* Reduz espaço entre itens */
+    }
+
+    .nav-right ul {
+        gap: 1rem;
+    }
+}
+
+.hero {
+    background: url('../assets/images/hero.jpg') center/cover no-repeat;
+    /* Define uma imagem de fundo, centraliza, ajusta para cobrir toda a área e evita repetição */
+    height: 500px;
+    /* Define a altura fixa da seção Hero */
+    position: relative;
+    /* Permite posicionar elementos filhos de forma absoluta dentro do Hero */
+}
+
+.hero-overlay {
+    width: 100%;
+    /* Faz a overlay ocupar toda a largura do Hero */
+    height: 100%;
+    /* Faz a overlay ocupar toda a altura do Hero */
+    display: flex;
+    /* Usa Flexbox para alinhar conteúdo */
+    align-items: center;
+    /* Alinha verticalmente os elementos ao centro */
+    justify-content: flex-end;
+    /* Alinha horizontalmente o conteúdo para a direita */
+    padding: 0 4rem;
+    /* Adiciona espaçamento interno nas laterais */
+}
+.hero-content {
+    color: white;
+    max-width: 500px; /* Aumentado para melhorar a legibilidade */
+    text-align: center; /* Alinha o conteúdo ao centro */
+}
+
+.hero-content h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content h1 {
+    font-size: 2rem; /* Aumentado para se alinhar com a segunda imagem */
+    margin-bottom: 1.5rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-outline:hover, .btn-filled:hover {
+    background-color: #6329A2;
+    color: white;
+    border-color: #6329A2;
+}
+
+.btn-filled {
+    background-color: white;
+    color: #a855f7;
 }
