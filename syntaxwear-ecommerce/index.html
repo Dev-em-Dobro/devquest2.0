@@ -12,6 +12,14 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/main.css">
+
+    <script>
+        // Função para alternar o menu mobile
+function toggleMenu() {
+    const mobileMenu = document.getElementById("mobile-menu");
+    mobileMenu.classList.toggle("active");
+}
+    </script>
 </head>
 
 <body>
@@ -23,6 +31,25 @@
                 <img src="./assets/images/logo.svg" alt="SyntaxWear - Tênis e Sneakers Online">
             </a>
         </h1>
+
+        <!-- Menu Hamburguer -->
+        <div class="menu-hamburguer" onclick="toggleMenu()">
+            <img src="./assets/images/menu-hamburguer.svg" alt="Menu Hamburguer">
+        </div>
+
+        <!-- Menu Hamburguer - Menu Oculto (mobile) -->
+        <div class="mobile-menu" id="mobile-menu">
+            <ul>
+                <li><a href="#">Masculino</a></li>
+                <li><a href="#">Feminino</a></li>
+                <li><a href="#">Outlet</a></li>
+                <li><a href="#">Nossas Lojas</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Carrinho de Compras</a></li>
+            </ul>
+        </div>
 
         <nav class="nav-center" aria-label="Categorias principais">
             <ul>
@@ -59,7 +86,7 @@
                 </div>
             </div>
         </section>
-        
+
 
         <!-- Categories -->
         <section class="categories">
