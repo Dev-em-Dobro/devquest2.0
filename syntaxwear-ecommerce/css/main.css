@@ -114,6 +114,10 @@ body {
 
 .menu-hamburguer {
   display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }
 
 /* ===== MENU HAMBURGUER ===== */
@@ -214,15 +218,17 @@ body {
   }
 }
 
-.hero-content h4 {
-  font-size: 1rem;
+.hero-subtitle {
+  font-size: 1.25rem;
   margin-bottom: 0.5rem;
+  margin: 0 0 0.5rem;
 }
 
 .hero-content h1 {
   font-size: 2rem;
   /* Aumentado para se alinhar com a segunda imagem */
   margin-bottom: 1.5rem;
+  font-weight: 500;
 }
 
 .hero-buttons {
@@ -232,11 +238,12 @@ body {
 }
 
 .btn {
-  width: 161px;
+  font-size: 1.25rem;
+  width: 163px;
   height: 48px;
   border-radius: 25px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
   line-height: 47px;
   transition: background-color 0.3s, border 0.3s;
 }
@@ -324,19 +331,15 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  padding: 10px 20px;
-  border-radius: 9999px;
+  border-radius: 50px;
   font-weight: 700;
   font-size: 0.95rem;
   color: #fff;
-  background: rgba(255, 255, 255, .10);
   border: 2px solid rgba(255, 255, 255, .95);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, .25);
-  transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
-  display: inline-block;
-  cursor: pointer;
+  width: 141px;
+  height: 48px;
+  text-align: center;
+  line-height: 45px;
 }
 
 /* Hover */
