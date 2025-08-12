@@ -1,8 +1,8 @@
 /* Estilizando o body */
 body {
   font-family: var(--fonte-principal), sans-serif;
-  background-color: var(--cor-fundo-claro);
-  color: var(--cor-texto-escuro);
+  background-color: #ffffff;
+  color: #000000;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -213,7 +213,7 @@ body {
 
 /* Responsivo */
 @media (max-width: 768px) {
-  .hero-content{
+  .hero-content {
     max-width: 100%;
   }
 }
@@ -266,125 +266,180 @@ body {
   color: #a855f7;
 }
 
-/* Seção */
+
+/* Seção principal que envolve as categorias */
 .categories {
   padding: 40px 20px;
-  background: #f6f8fb;
-  max-width: 1200px;
-  margin: 0 auto;
+  /* Espaço interno: 40px em cima/baixo e 20px nas laterais */
 }
 
+/* Título da seção de categorias */
 .categories-title {
   font-size: 2.25rem;
+  /* Tamanho grande para o título */
   font-weight: 800;
+  /* Peso de fonte bem forte (extrabold) */
   text-align: center;
+  /* Centraliza o texto do título */
   margin-bottom: 36px;
+  /* Espaço abaixo do título antes do grid */
   color: #1f2937;
+  /* Cor do texto (cinza bem escuro) */
 }
 
-/* Grid de cards */
+/* Flexbox que contém os cards de categoria */
 .categories-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  /* Ativa layout flexbox */
+  flex-wrap: wrap;
+  /* Permite que os itens quebrem para próxima linha */
+  justify-content: center;
+  /* Centraliza os cards horizontalmente */
   gap: 30px;
+  /* Espaçamento entre os cards */
 }
 
+/* Estilo base de cada card de categoria */
 .category-card {
   position: relative;
+  /* Permite posicionar overlay/CTA com absolute dentro */
+  width: 280px;
+  /* Largura fixa para manter consistência no flexbox */
   height: 500px;
-  /* altura fixa */
+  /* Altura fixa do card (desktop) */
+  flex: 0 0 280px;
+  /* Não cresce, não encolhe, base de 280px */
   border-radius: 18px;
+  /* Cantos arredondados do card */
   overflow: hidden;
+  /* Corta conteúdo que sai fora dos limites (importante pro radius) */
   box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
-  transition: transform .25s ease, box-shadow .25s ease;
+  /* Sombra suave para profundidade */
+  transition: transform .25s ease,
+    /* Suaviza a animação de deslocamento no hover */
+    box-shadow .25s ease;
+  /* Suaviza a animação de sombra no hover */
 
-  /* imagem de fundo */
+  /* Configuração da imagem de fundo do card */
   background-size: cover;
-  /* cobre todo o espaço */
+  /* Cobre todo o card, mantendo proporção da imagem */
   background-position: center;
-  /* centraliza */
+  /* Centraliza a área visível da imagem */
   background-repeat: no-repeat;
-  /* evita repetição */
+  /* Impede que a imagem se repita */
 }
 
-/* Overlay preto translúcido */
+/* Camada (overlay) preta translúcida acima da imagem de fundo */
 .category-card .overlay {
   position: absolute;
+  /* Posicionamento em relação ao card (pai relative) */
   inset: 0;
+  /* Atalho para top/right/bottom/left: 0 (preenche todo o card) */
   background: rgba(0, 0, 0, .25);
+  /* Cor preta com transparência de 25% */
   z-index: 1;
+  /* Fica acima da imagem de fundo, mas abaixo do CTA */
   transition: background .25s ease;
+  /* Suaviza a mudança de opacidade no hover */
 }
 
-/* Link do card */
+/* Link que envolve todo o card para torná-lo clicável */
 .category-link {
   display: block;
+  /* Faz o link ocupar toda a área do card */
   width: 100%;
+  /* Largura total do card */
   height: 100%;
+  /* Altura total do card */
   text-decoration: none;
+  /* Remove sublinhado do link */
 }
 
-/* Texto do botão */
+/* Botão/CTA centralizado no card */
 .category-cta {
   position: absolute;
+  /* Posiciona de forma absoluta dentro do card */
   left: 50%;
+  /* Centraliza horizontalmente (ponto inicial) */
   top: 50%;
+  /* Centraliza verticalmente (ponto inicial) */
   transform: translate(-50%, -50%);
+  /* Ajuste fino: centraliza pelo próprio centro */
   z-index: 2;
+  /* Fica acima do overlay */
   border-radius: 50px;
+  /* Bordas arredondadas estilo “pill” */
   font-weight: 700;
+  /* Texto mais forte no CTA */
   font-size: 0.95rem;
+  /* Tamanho de fonte do CTA */
   color: #fff;
+  /* Texto branco no CTA */
   border: 2px solid rgba(255, 255, 255, .95);
+  /* Borda branca quase sólida */
   width: 141px;
+  /* Largura do “botão” */
   height: 48px;
+  /* Altura do “botão” */
   text-align: center;
+  /* Centraliza o texto dentro do botão */
   line-height: 45px;
+  /* Alinha verticalmente o texto (próximo da altura) */
 }
 
-/* Hover */
+/* Efeitos ao passar o mouse no card */
 .category-card:hover {
   transform: translateY(-4px);
+  /* Leve “lift” para dar sensação de elevação */
   box-shadow: 0 16px 40px rgba(0, 0, 0, .14);
+  /* Sombra mais forte no hover */
 }
 
 .category-card:hover .overlay {
   background: rgba(0, 0, 0, .45);
+  /* Escurece mais o overlay para destacar o CTA */
 }
 
 .category-card:hover .category-cta {
   transform: translate(-50%, -50%) scale(1.03);
+  /* Leve aumento no CTA ao hover */
   box-shadow: 0 10px 24px rgba(0, 0, 0, .30);
+  /* Sombra no CTA para destacá-lo */
 }
 
+/* Classes utilitárias para aplicar imagens específicas de fundo */
 .moderno {
   background-image: url("../assets/images/tenis-moderno.jpg");
+  /* Imagem para categoria “moderno” */
 }
 
 .esporte {
   background-image: url("../assets/images/tenis-esportivo.jpg");
+  /* Imagem para categoria “esporte” */
 }
 
 .futurista {
   background-image: url("../assets/images/tenis-futurista.jpg");
+  /* Imagem para categoria “futurista” */
 }
 
 .casual {
   background-image: url("../assets/images/tenis-casual.jpg");
+  /* Imagem para categoria “casual” */
 }
 
-/* Responsivo - apenas ajusta altura dos cards em telas menores */
+/* Responsividade para flexbox */
 @media (max-width: 768px) {
   .category-card {
+    width: 250px;
     height: 350px;
+    flex: 0 0 250px;
+    /* Reduz largura e altura em tablets */
   }
 }
 
-@media (max-width: 480px) {
-  .category-card {
-    height: 280px;
-  }
-}
+
+
 
 /* ===== Products Grid (container) ===== */
 .products-grid {
@@ -523,7 +578,7 @@ body {
 
 /* ===== Responsivo ===== */
 @media (max-width: 1024px) {
-  
+
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 200px;

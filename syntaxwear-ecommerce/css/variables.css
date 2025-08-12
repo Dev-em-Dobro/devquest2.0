@@ -1,49 +1,7 @@
 /* Importação das fontes do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 
-/* Variáveis de Cores */
-:root {
-    --cor-primaria: #6C63FF; /* Exemplo de roxo */
-    --cor-secundaria: #FFB6C1; /* Exemplo de rosa claro */
-    --cor-terciaria: #5C6BC0; /* Exemplo de azul */
-    
-    --cor-fundo-claro: #F9F9F9; /* Cor de fundo mais clara */
-    --cor-fundo-escuro: #2C2C2C; /* Fundo escuro */
-    --cor-texto-claro: #FFFFFF; /* Texto branco */
-    --cor-texto-escuro: #212121; /* Texto escuro */
-    --cor-borda: #D1D1D1; /* Cor das bordas */
-}
-
 /* Variáveis Tipográficas */
 :root {
     --fonte-principal: 'Ubuntu', sans-serif;
-    --font-size-titulo: 2.5rem; /* Tamanho de fonte para título */
-    --font-size-subtitulo: 1.5rem; /* Tamanho de fonte para subtítulo */
-    --font-size-corpo: 1rem; /* Tamanho de fonte para corpo de texto */
-    --font-size-pequeno: 0.875rem; /* Tamanho de fonte pequeno */
-    
-    --peso-fonte-normal: 400;
-    --peso-fonte-medio: 500;
-    --peso-fonte-negrito: 700;
-    
-    --line-height-titulo: 1.4;
-    --line-height-subtitulo: 1.6;
-    --line-height-corpo: 1.8;
-}
-
-/* Variáveis de Espaçamento */
-:root {
-    --espaco-pequeno: 8px;
-    --espaco-mediano: 16px;
-    --espaco-grande: 32px;
-    --espaco-extra-grande: 64px;
-    --espaco-menu: 0.25rem;
-}
-
-/* Breakpoints (tamanhos de tela para responsividade) */
-:root {
-    --breakpoint-sm: 480px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 1024px;
-    --breakpoint-xl: 1200px;
 }
