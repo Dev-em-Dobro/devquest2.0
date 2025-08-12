@@ -15,10 +15,10 @@
 
     <script>
         // Função para alternar o menu mobile
-function toggleMenu() {
-    const mobileMenu = document.getElementById("mobile-menu");
-    mobileMenu.classList.toggle("active");
-}
+        function toggleMenu() {
+            const mobileMenu = document.getElementById("mobile-menu");
+            mobileMenu.classList.toggle("active");
+        }
     </script>
 </head>
 
@@ -88,30 +88,155 @@ function toggleMenu() {
         </section>
 
 
-        <!-- Categories -->
         <section class="categories">
-            <!-- Grid de categorias será adicionado depois -->
-        </section>
 
-        <!-- Featured Product -->
-        <section class="featured-product">
-            <!-- Produto em destaque será adicionado depois -->
+            <div class="categories-container">
+
+                <div class="category-card casual">
+                    <a href="">
+                        <span class="overlay"></span>
+                        <button class="category-cta" type="button">Casual</button>
+                    </a>
+                </div>
+
+                <div class="category-card esporte">
+                    <a href="">
+                        <span class="overlay"></span>
+                        <button class="category-cta" type="button">Esporte</button>
+                    </a>
+                </div>
+
+                <div class="category-card moderno">
+                    <a href="">
+                        <span class="overlay"></span>
+                        <button class="category-cta" type="button">Moderno</button>
+                    </a>
+                </div>
+
+                <div class="category-card futurista">
+                    <a href="">
+                        <span class="overlay"></span>
+                        <button class="category-cta" type="button">Futurista</button>
+                    </a>
+                </div>
+
+            </div>
         </section>
 
         <!-- Products Grid -->
-        <section class="products-grid">
-            <!-- Grid de produtos será adicionado depois -->
+        <!-- Products Grid -->
+        <section class="products-grid" aria-label="Produtos em destaque">
+
+            <!-- HERO grande à esquerda -->
+            <div class="pg-card pg-hero bg-hero">
+                <div class="pg-overlay"></div>
+                <div class="pg-hero-content">
+                    <p class="pg-eyebrow">Krypton One</p>
+                    <h3 class="pg-title">Estilo urbano com atitude</h3>
+                    <div class="pg-cta-group">
+                        <a href="#" class="pg-cta">Feminino</a>
+                        <a href="#" class="pg-cta">Masculino</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pg-card pg-top1 bg-top1"></div>
+            <div class="pg-card pg-midL bg-midL"></div>
+            <div class="pg-card pg-midR bg-midR"></div>
+            <div class="pg-card pg-bottomL bg-bottomL"></div>
+            <div class="pg-card pg-bottomR bg-bottomR"></div>
+
         </section>
 
-        <!-- Products Colors Tabs -->
-        <section class="products-colors-tabs">
-            <!-- Abas de cores do produtos -->
-        </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <!-- Informações de contato serão adicionadas depois -->
+        <div class="footer-container">
+            <div class="footer-right">
+                <div class="footer-newsletter">
+                    <label for="newsletter-email">Inscreva-se em nosso e-mail</label>
+                    <input type="email" id="newsletter-email" placeholder="email@email.com"
+                        aria-label="E-mail para newsletter">
+                </div>
+
+                <!-- Redes Sociais -->
+                <div class="footer-social">
+                    <span>Redes sociais</span>
+                    <nav class="social-links" aria-label="Redes sociais">
+                        <a href="#" aria-label="Instagram">
+                            <img src="./assets/images/instagram-logo.svg" alt="Instagram">
+                        </a>
+                        <a href="#" aria-label="WhatsApp">
+                            <img src="./assets/images/whatsapp-logo.svg" alt="WhatsApp">
+                        </a>
+                        <a href="#" aria-label="TikTok">
+                            <img src="./assets/images/tiktok-logo.svg" alt="TikTok">
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <img src="./assets/images/facebook-logo.svg" alt="Facebook">
+                        </a>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Links Section -->
+            <nav class="footer-links" aria-label="Links do rodapé">
+                <!-- Coluna Masculino -->
+                <div class="footer-column">
+                    <h3>Masculino</h3>
+                    <ul>
+                        <li><a href="#">Casual</a></li>
+                        <li><a href="#">Esporte</a></li>
+                        <li><a href="#">Moderno</a></li>
+                        <li><a href="#">Futurista</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna Feminino -->
+                <div class="footer-column">
+                    <h3>Feminino</h3>
+                    <ul>
+                        <li><a href="#">Casual</a></li>
+                        <li><a href="#">Esporte</a></li>
+                        <li><a href="#">Moderno</a></li>
+                        <li><a href="#">Futurista</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna Outlet -->
+                <div class="footer-column">
+                    <h3>Outlet</h3>
+                    <ul>
+                        <li><a href="#">Masculino</a></li>
+                        <li><a href="#">Feminino</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna Institucional -->
+                <div class="footer-column">
+                    <h3>Nossa Lojas</h3>
+                    <ul>
+                        <li><a href="#">Loja física</a></li>
+                        <li><a href="#">Loja online</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna Sobre -->
+                <div class="footer-column">
+                    <h3>Sobre</h3>
+                    <ul>
+                        <li><a href="#">Quem somos</a></li>
+                        <li><a href="#">Missão</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright">
+            <p>Copyright. All Rights Reserved</p>
+        </div>
     </footer>
 </body>
 
