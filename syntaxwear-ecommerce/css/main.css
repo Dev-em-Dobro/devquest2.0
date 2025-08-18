@@ -603,6 +603,7 @@ body {
   padding: 3rem 2rem 2rem;
   display: flex;
   gap: 4rem;
+  justify-content: space-between;
 }
 
 /* Newsletter Section */
@@ -679,9 +680,9 @@ body {
 
 /* Footer Links */
 .footer-links {
-  flex: 1;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 
@@ -744,13 +745,16 @@ body {
   }
 
   .footer-links {
-    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+  }
+
+  .footer-links > .footer-column {
+    flex: 0 0 100%;
   }
 }
 
 @media (max-width: 480px) {
-  .footer-links {
-    grid-template-columns: 1fr;
+  .footer-links > .footer-column {
+    flex: 0 0 100%;
   }
 }
